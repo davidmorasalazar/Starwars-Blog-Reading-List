@@ -19,7 +19,9 @@ export const Menu = () => {
 						/>
 					</Navbar.Brand>
 				</Link>
-
+				<Link to="/register">
+					<button className="btn btn-primary">Register</button>
+				</Link>
 				<Navbar.Collapse className="justify-content-end">
 					<DropdownButton
 						id="dropdown-basic-button"

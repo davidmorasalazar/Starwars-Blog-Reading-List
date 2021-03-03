@@ -10,6 +10,9 @@ import { People } from "./component/people";
 import { PeopleDetails } from "./views/peopleDetails";
 import { PlanetDetails } from "./views/planetDetails";
 import { Home } from "./component/carousel";
+import { Register } from "./views/register";
+import { Login } from "./views/login";
+
 //create your first component
 const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -35,6 +38,12 @@ const Layout = () => {
 						<Planets data={store.planets} />
 					</div>
 				</Route>
+				<Route exact path="/register">
+					<Register />
+				</Route>
+				<Route exact path="/login">
+					<Login />
+				</Route>
 				<Route exact path="/characters">
 					<People data={store.peoples} />
 				</Route>
@@ -46,6 +55,9 @@ const Layout = () => {
 				</Route>
 				<Route exact path="/planet/:id">
 					<PlanetDetails data={store.planets} />
+				</Route>
+				<Route>
+					<h1>Not found!</h1>
 				</Route>
 			</Switch>
 		</BrowserRouter>
