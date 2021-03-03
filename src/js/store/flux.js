@@ -10,18 +10,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			// Use getActions to call a function within a fuction
 			loadPeople: async () => {
-				const url = "https://swapi.dev/api/people/";
+				// const url = "https://swapi.dev/api/people/";
+				const url = "https://3000-plum-weasel-pbbypnmk.ws-us03.gitpod.io/get_characters";
 				const response = await fetch(url);
 				const data = await response.json();
-				setStore({ peoples: data.results });
+				setStore({ peoples: data });
 			},
 
 			loadPlanet: async () => {
-				const url = "https://swapi.dev/api/planets/";
+				//const url = "https://swapi.dev/api/planets/";
+				const url = "https://3000-plum-weasel-pbbypnmk.ws-us03.gitpod.io/get_planets";
 				const response = await fetch(url);
 				// el response.json funciona para hacer los string a formato json
 				const data = await response.json();
-				setStore({ planets: data.results });
+				setStore({ planets: data });
 			},
 
 			addFavorite: (name, type) => {

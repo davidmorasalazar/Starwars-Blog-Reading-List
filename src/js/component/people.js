@@ -16,7 +16,7 @@ export const People = props => {
 				<Button variant="outline-dark">Search</Button>
 			</Form> */}
 			<CardDeck>
-				{props.data.map((people, i) => {
+				{(props.data || []).map((people, i) => {
 					return (
 						<Col className="mt-5" md={4} key={i}>
 							<Card>

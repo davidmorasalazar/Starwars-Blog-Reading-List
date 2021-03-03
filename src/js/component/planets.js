@@ -9,7 +9,7 @@ export const Planets = props => {
 		<Container>
 			<h1 className="text-center mt-5">Planets</h1>
 			<CardDeck className="overflow-X: auto">
-				{props.data.map((planet, i) => {
+				{(props.data || []).map((planet, i) => {
 					return (
 						<Col className="mt-5" md={4} key={i}>
 							<Card className="overflow-X: auto">
