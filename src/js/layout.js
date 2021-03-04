@@ -29,14 +29,15 @@ const Layout = () => {
 
 	return (
 		<BrowserRouter basename={basename}>
-			<Menu />
 			<Switch>
 				<Route exact path="/">
-					<div>
-						<Home />
-						<People data={store.peoples} />
-						<Planets data={store.planets} />
-					</div>
+					<Register />
+				</Route>
+				<Route exact path="/menu">
+					<Menu />
+					<Home />
+					<People data={store.peoples} />
+					<Planets data={store.planets} />
 				</Route>
 				<Route exact path="/register">
 					<Register />
@@ -45,9 +46,11 @@ const Layout = () => {
 					<Login />
 				</Route>
 				<Route exact path="/characters">
+					<Menu />
 					<People data={store.peoples} />
 				</Route>
 				<Route exact path="/planetsView">
+					<Menu />
 					<Planets data={store.planets} />
 				</Route>
 				<Route exact path="/people/:id">

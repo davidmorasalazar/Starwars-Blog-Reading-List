@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export const Menu = () => {
 	const { store, actions } = useContext(Context);
 	return (
-		<Container>
+		// <Container>
 			<Navbar bg="light">
 				<Link to="/">
 					<Navbar.Brand href="#home">
@@ -19,12 +19,12 @@ export const Menu = () => {
 						/>
 					</Navbar.Brand>
 				</Link>
-				<Link to="/register">
+				{/* <Link to="/register">
 					<button className="btn btn-primary">Register</button>
 				</Link>
 				<Link to="/login">
 					<button className="btn btn-primary">Login</button>
-				</Link>
+				</Link> */}
 				<Navbar.Collapse className="justify-content-end">
 					<DropdownButton
 						id="dropdown-basic-button"
@@ -83,13 +83,13 @@ export const Menu = () => {
 						</Dropdown.Item>
 						<Dropdown.Item href="#/action-1">
 							{" "}
-							<Link to="/">
+							<Link to="/menu">
 								<label>Principal</label>
 							</Link>
 						</Dropdown.Item>
 					</Dropdown.Menu>
 				</Dropdown>{" "}
 			</div>
-		</Container>
+		{/* </Container> */}
 	);
 };

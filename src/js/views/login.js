@@ -1,5 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Form, Col, Row, Button, Card, Accordion, footer } from "react-bootstrap";
 
 export const Login = () => {
 	const [email, setEmail] = useState("");
@@ -61,7 +63,7 @@ export const Login = () => {
 				</div>
 				<input type="submit" className="btn btn-primary" value="Login" />
 			</form>
-			{redirect ? <Redirect to="/" /> : ""}
+			{redirect ? <Redirect to="/menu" /> : ""}
 		</div>
 	);
 };
