@@ -13,7 +13,10 @@ export const Planets = props => {
 					return (
 						<Col className="mt-5" md={4} key={i}>
 							<Card className="overflow-X: auto">
-								<Card.Img variant="top" src="#" />
+								<Card.Img
+									variant="top"
+									src="https://www.itl.cat/pngfile/big/313-3132385_planet-wallpaper-hd-space-planets.jpg"
+								/>
 								<Card.Body>
 									<Card.Title>{planet.name}</Card.Title>
 									<Card.Text>

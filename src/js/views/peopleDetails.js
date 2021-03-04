@@ -24,7 +24,7 @@ export function PeopleDetails(props) {
 											width={400}
 											height={300}
 											className="align-self-center mr-3"
-											src="#"
+											src="https://api.time.com/wp-content/uploads/2019/12/cute-star-wars-characters-10.jpg"
 											alt="Generic placeholder"
 										/>
 									</Col>

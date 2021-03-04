@@ -16,10 +16,11 @@ export const Register = () => {
 		// FETCH
 		const data = { email: email, password: pass };
 
-		fetch("https://3000-coffee-flamingo-vlyi3ez3.ws-us03.gitpod.io/register", {
+		fetch("https://3000-plum-weasel-pbbypnmk.ws-us03.gitpod.io/register", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
+				// "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYxNDc5NjMxNSwianRpIjoiNGU5MjlhZDctYTlhOC00YTc2LTk0ZjctMTNlNGEwNGI4ZDc0IiwibmJmIjoxNjE0Nzk2MzE1LCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiZGF2aWRtb3JhQGdtYWlsLmNvbSIsImV4cCI6MTYxNTA1NTUxNX0.WL3DkzV7eCqkO6Y3EWQzo4E36G-a4Gxeez1aQv57ZuA"
 			},
 			body: JSON.stringify(data)
 		})

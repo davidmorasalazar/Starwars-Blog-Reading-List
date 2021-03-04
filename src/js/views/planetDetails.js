@@ -24,7 +24,7 @@ export function PlanetDetails(props) {
 											width={400}
 											height={300}
 											className="align-self-center mr-3"
-											src="#"
+											src="https://i.redd.it/elmvejoyc7541.png"
 											alt="Generic placeholder"
 										/>
 									</Col>

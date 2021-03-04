@@ -16,7 +16,7 @@ export const Login = () => {
 		// FETCH
 		const data = { email: email, password: pass };
 
-		fetch("https://3000-coffee-flamingo-vlyi3ez3.ws-us03.gitpod.io/login", {
+		fetch("https://3000-plum-weasel-pbbypnmk.ws-us03.gitpod.io/login", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
