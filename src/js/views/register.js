@@ -18,7 +18,7 @@ export const Register = () => {
 		// FETCH
 		const data = { email: email, password: pass };
 
-		fetch("https://3000-plum-weasel-pbbypnmk.ws-us03.gitpod.io/register", {
+		fetch("https://3000-cyan-harrier-dkrxu9b6.ws-us03.gitpod.io/register", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
@@ -70,7 +70,7 @@ export const Register = () => {
 															<Form.Control type="password" placeholder="Password" />
 														</Form.Group>
 													</Form.Row>
-													<Link to="/Menu">
+													<Link to="/menu">
 														<Button variant="primary" type="submit">
 															Login
 														</Button>

@@ -7,30 +7,33 @@ import { Dropdown, DropdownButton, Navbar } from "react-bootstrap";
 
 export const Home = () => {
 	return (
-		<Container>
-			{/* <switch> */}
-			<div>
-				{/* <Dropdown align={"center"}>
-					<Dropdown.Toggle variant="success" id="dropdown-basic" size="lg">
-						Index
-					</Dropdown.Toggle>
+		<div>
+			<Dropdown align={"center"}>
+				<Dropdown.Toggle variant="success" id="dropdown-basic" size="lg">
+					Index
+				</Dropdown.Toggle>
 
-					<Dropdown.Menu>
-						<Dropdown.Item href="#/action-1">
-							{" "}
-							<Link to="/characters">
-								<label>characters</label>
-							</Link>
-						</Dropdown.Item>
-						<Dropdown.Item href="#/action-2">
-							{" "}
-							<Link to="/planetsView">
-								<label>planets</label>
-							</Link>
-						</Dropdown.Item>
-					</Dropdown.Menu>
-				</Dropdown>{" "} */}
-			</div>
-		</Container>
+				<Dropdown.Menu>
+					<Dropdown.Item href="#/action-1">
+						{" "}
+						<Link to="/characters">
+							<label>characters</label>
+						</Link>
+					</Dropdown.Item>
+					<Dropdown.Item href="#/action-2">
+						{" "}
+						<Link to="/planetsView">
+							<label>planets</label>
+						</Link>
+					</Dropdown.Item>
+					<Dropdown.Item href="#/action-1">
+						{" "}
+						<Link to="/menu">
+							<label>Principal</label>
+						</Link>
+					</Dropdown.Item>
+				</Dropdown.Menu>
+			</Dropdown>{" "}
+		</div>
 	);
 };
