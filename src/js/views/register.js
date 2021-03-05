@@ -2,27 +2,27 @@ import React, { useState, useContext } from "react";
 import { Redirect } from "react-router-dom";
 import { Form, Col, Row, Button, Card, Accordion, footer } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import { Context } from "../store/appContext";
 export const Register = () => {
 	const [email, setEmail] = useState("");
 	const [pass, setPass] = useState("");
+	const [name, setName] = useState("");
 	const [redirect, setRedirect] = useState(false);
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		if (email === "" || pass === "") {
-			alert("correo y contraseña son requeridos");
+		if (email === "" || pass === "" || name === "") {
+			alert("Nombre, correo y contraseña son requeridos");
 		}
 		console.log(email, pass);
 
 		// FETCH
-		const data = { email: email, password: pass };
+		const data = { email: email, password: pass, name: name };
 
 		fetch("https://3000-cyan-harrier-dkrxu9b6.ws-us03.gitpod.io/register", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
-				// "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYxNDc5NjMxNSwianRpIjoiNGU5MjlhZDctYTlhOC00YTc2LTk0ZjctMTNlNGEwNGI4ZDc0IiwibmJmIjoxNjE0Nzk2MzE1LCJ0eXBlIjoiYWNjZXNzIiwic3ViIjoiZGF2aWRtb3JhQGdtYWlsLmNvbSIsImV4cCI6MTYxNTA1NTUxNX0.WL3DkzV7eCqkO6Y3EWQzo4E36G-a4Gxeez1aQv57ZuA"
 			},
 			body: JSON.stringify(data)
 		})
@@ -89,13 +89,18 @@ export const Register = () => {
 									<Accordion.Collapse eventKey="1">
 										<Card.Body>
 											<div className="text-center">
-												<Form>
-													<Form.Group controlId="formGridAddress1">
+												<Form onSubmit={e => handleSubmit(e)}>
+													<Form.Group
+														controlId="formGridAddress1"
+														onChange={e => setName(e.target.value)}>
 														<Form.Label>Name</Form.Label>
-														<Form.Control placeholder="Write your name" />
+														<Form.Control type="name" placeholder="Write your name" />
 													</Form.Group>
 													<Form.Row>
-														<Form.Group as={Col} controlId="formGridEmail">
+														<Form.Group
+															as={Col}
+															controlId="formGridEmail"
+															onChange={e => setEmail(e.target.value)}>
 															<Form.Label>Email</Form.Label>
 															<Form.Control
 																type="email"
@@ -103,7 +108,10 @@ export const Register = () => {
 															/>
 														</Form.Group>
 
-														<Form.Group as={Col} controlId="formGridPassword">
+														<Form.Group
+															as={Col}
+															controlId="formGridPassword"
+															onChange={e => setPass(e.target.value)}>
 															<Form.Label>Password</Form.Label>
 															<Form.Control type="password" placeholder="Password" />
 														</Form.Group>

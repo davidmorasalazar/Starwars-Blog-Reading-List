@@ -13,6 +13,10 @@ import { Home } from "./component/carousel";
 import { Register } from "./views/register";
 import { Login } from "./views/login";
 import ScrollToTop from "./component/scrollToTop";
+
+import { Register1 } from "./views/register1";
+import { Login1 } from "./views/login1";
+
 //create your first component
 const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -32,7 +36,14 @@ const Layout = () => {
 			<ScrollToTop>
 				<Switch>
 					<Route exact path="/">
+						<Menu />
+						<Home />
+					</Route>
+					<Route exact path="/register">
 						<Register />
+					</Route>
+					<Route exact path="/login">
+						<Login1 />
 					</Route>
 					<Route exact path="/menu">
 						<Menu />
@@ -40,12 +51,12 @@ const Layout = () => {
 						<People data={store.peoples} />
 						<Planets data={store.planets} />
 					</Route>
-					<Route exact path="/register">
+					{/* <Route exact path="/register">
 						<Register />
 					</Route>
 					<Route exact path="/login">
 						<Login />
-					</Route>
+					</Route> */}
 					<Route exact path="/characters">
 						<Menu />
 						<Home />

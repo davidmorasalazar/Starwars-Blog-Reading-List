@@ -1,9 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Dropdown, Container, DropdownButton, Navbar, Button } from "react-bootstrap";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 export const Menu = () => {
 	const { store, actions } = useContext(Context);
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 	return (
 		// <Container>
 		<Navbar bg="light">
@@ -57,10 +60,13 @@ export const Menu = () => {
 					)}
 				</DropdownButton>
 			</Navbar.Collapse>
-			<Link to="/">
+			<Link to="/register">
 				<Button variant="primary" type="submit" className="ml-3">
 					Logout
 				</Button>
+			</Link>
+			<Link to="/register">
+				<button className="btn btn-primary">Register</button>
 			</Link>
 
 			{/* <div>
